@@ -8,7 +8,7 @@
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --watchAll",
+    "test:watch": "node LOG_DISABLED=true --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --watchAll",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --coverage tests/unit"
   },
   "engines": {
