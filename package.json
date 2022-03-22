@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node server/index.js",
     "live-reload": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --watchAll",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache --coverage tests/unit"
   },
   "engines": {
     "node": "17"
@@ -16,6 +18,7 @@
   "author": "luan-antonio",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
